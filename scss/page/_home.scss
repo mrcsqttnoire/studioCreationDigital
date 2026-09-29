@@ -2,6 +2,10 @@
 @use '../variables/base_dir' as *;
 @use '../responsive/base_dir' as *;
 
+.even-section--height{
+    height: 800px;
+}
+
 .hero{
     // margin-top: rem(90);
     height: 800px;

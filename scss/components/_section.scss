@@ -1,3 +1,5 @@
+@use '../variables/base_dir' as *;
+
 .even-section{
     background-color: $bg-even-section;
 }
