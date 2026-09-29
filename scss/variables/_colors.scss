@@ -1,9 +1,15 @@
-$bg-section-1 : #F8F9FA;
-$bg-section-2 : #F1F3F5;
-$bg-header : #FFFFFF;
+$bg-even-section : #F8F9FA;
+$bg-odd-section : #F1F3F5;
+$white-color : #FFFFFF;
+$bg-header : $white-color;
+
+$logo-color : #073C35;
+$logo-dot-color : #C29B4F;
 
 $bg-btn : #073C35;
+
 $bg-btn-alt : #F09008;
 $accent-color : #6E38F7;
+$bg-accent-color : #6E38F710;
 
 $text-color : #121214;

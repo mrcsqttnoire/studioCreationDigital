@@ -1,7 +1,79 @@
 @use '../base/base_dir' as *;
+@use '../variables/base_dir' as *;
+@use '../responsive/base_dir' as *;
+
+header{
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: rem(90);
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.03);
+    background-color: $bg-header;
+}
+
+.head{
+    height: 100%;
+    @include flex($jc: space-between);
+}
+
+.head__left{
+    @include flex($gap: 15px);
+}
+
+.burgerMenu{
+    @include flex($direction: column, $gap: 8px);
+    div{
+        width: 30px;
+        height: 3px;
+        background-color: $logo-color;
+    }
+
+    @include respond($lg){
+        display: none;
+    }
+}
+
+.logo{
+    font-family: $font-logo;
+    font-size: rem(28);
+
+    .logo__text{
+        color: $logo-color;
+    }
+
+    span{
+        color: $logo-dot-color;
+    }
+}
 
 .navigation{
     ul{
-        @include flex-center(row, 40px);
+        @include flex($direction: column, $gap: rem(40));
+        display: none;
     }
+
+    a{
+        font-size: rem(14);
+        font-family: $font-nav;
+        font-weight: 600;
+    }
+
+    @include respond($lg){
+        ul{
+            @include flex($gap:40px);
+        }
+    }
+}
+
+.separator{
+    width: .5px;
+    background-color: $bg-even-section;
+    border: 1 solid $bg-even-section;
+    height: rem(30);
+}
+
+.head__right{
+    @include flex($jc: none, $ai: center, $gap: 20px);
+    font-family: $font-nav;
+    color: $logo-color;
 }

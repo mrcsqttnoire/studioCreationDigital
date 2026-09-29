@@ -1,0 +1,17 @@
+@use '../base/base_dir' as *;
+@use '../variables/base_dir' as *;
+@use '../responsive/base_dir' as *;
+
+.primary-btn{
+    padding: 14px 28px;
+    background-color: $bg-btn;
+    font-family: $font-body;
+    color: $white-color;
+    border: 2px solid $bg-btn;
+}
+
+.secondary-btn{
+    padding: 14px 28px;
+    font-family: $font-body;
+    border: 2px solid $bg-btn;
+}

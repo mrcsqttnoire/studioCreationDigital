@@ -1,0 +1,66 @@
+@use '../base/base_dir' as *;
+@use '../variables/base_dir' as *;
+@use '../responsive/base_dir' as *;
+
+.hero{
+    // margin-top: rem(90);
+    height: 800px;
+    @include flex($jc: space-between, $ai: center, $gap: 20px);
+    flex-wrap: wrap;
+
+    @include respond($lg){
+        flex-wrap: unset;
+    // @include flex($jc: space-between, $ai: center, $gap: 0px);
+    }
+}
+
+.hero__left{
+    margin-top: $space-8;
+    width: 100%;
+    @include flex($direction: column,$ai: start ,$gap: $space-8);
+
+    @include respond($lg){
+        width: 50%;
+    }
+}
+
+.hero__right{
+    width: 100%;
+    margin-top: rem(48);
+    
+    img{
+        width: 100%;             
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        border-radius: rem(40);
+    }
+
+    @include respond($lg){
+        width: 100%;
+        max-width: rem(560);
+        margin-top: 0;
+    }
+}
+
+.hero__tag{
+    display: block;
+    padding: 6px 14px;
+    color: $accent-color;
+    background-color: $bg-accent-color;
+    border-radius: 20px;
+    font-size: rem(13);
+}
+
+.hero__title{
+    font-family: $font-heading;
+    font-size:  rem(64);
+}
+
+.hero__para{
+    font-family: $font-body;
+    font-size:  rem(18);
+}
+
+.hero__action{
+    @include flex($gap:16px)
+}

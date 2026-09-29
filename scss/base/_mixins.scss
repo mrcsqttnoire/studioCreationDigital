@@ -1,11 +1,19 @@
+@mixin respond($bp) {
+  $width: $bp;
+  @if $width {
+    @media (min-width: $width) { @content; }
+  }
+}
+
 @mixin d-flex($direction: row){
     display: flex;
     flex-direction: $direction;
 }
 
-@mixin flex-center($direction: row, $gap){
+@mixin flex($direction: row, $jc: center, $ai: center, $gap: none){
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: $direction;
+    justify-content: $jc;
+    align-items: $ai;
     gap: $gap;
 }

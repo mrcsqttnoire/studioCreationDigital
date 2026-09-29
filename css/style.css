@@ -24,8 +24,16 @@ li {
 }
 
 @font-face {
-  font-family: "Montserrat Alternates";
-  src: url(../../assets/fonts/Montserrat_Alternates/MontserratAlternates-Black.ttf);
+  font-family: "Montserrat-alt--semiBold";
+  src: url(../../assets/fonts/Montserrat_Alternates/MontserratAlternates-SemiBold.ttf);
+}
+@font-face {
+  font-family: "Montserrat-alt--regular";
+  src: url(../../assets/fonts/Montserrat_Alternates/MontserratAlternates-Regular.ttf);
+}
+@font-face {
+  font-family: "Montserrat-alt--bold";
+  src: url(../../assets/fonts/Montserrat_Alternates/MontserratAlternates-SemiBold.ttf);
 }
 @font-face {
   font-family: "Manrope";
@@ -36,14 +44,191 @@ li {
   src: url(../../assets/fonts/Outfit/Outfit.ttf);
 }
 @font-face {
-  font-family: "Poppins";
-  src: url(../../assets/fonts/Poppins/Poppins-Black.ttf);
+  font-family: "Poppins--semiBold";
+  src: url(../../assets/fonts/Poppins/Poppins-SemiBold.ttf);
 }
-.navigation ul {
+.primary-btn {
+  padding: 14px 28px;
+  background-color: #073C35;
+  font-family: "Montserrat-alt--regular";
+  color: #FFFFFF;
+  border: 2px solid #073C35;
+}
+
+.secondary-btn {
+  padding: 14px 28px;
+  font-family: "Montserrat-alt--regular";
+  border: 2px solid #073C35;
+}
+
+.hero {
+  height: 800px;
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+@media (min-width: 992px) {
+  .hero {
+    flex-wrap: unset;
+  }
+}
+
+.hero__left {
+  margin-top: 32px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 32px;
+}
+@media (min-width: 992px) {
+  .hero__left {
+    width: 50%;
+  }
+}
+
+.hero__right {
+  width: 100%;
+  margin-top: 3rem;
+}
+.hero__right img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 2.5rem;
+}
+@media (min-width: 992px) {
+  .hero__right {
+    width: 100%;
+    max-width: 35rem;
+    margin-top: 0;
+  }
+}
+
+.hero__tag {
+  display: block;
+  padding: 6px 14px;
+  color: #6E38F7;
+  background-color: rgba(110, 56, 247, 0.062745098);
+  border-radius: 20px;
+  font-size: 0.8125rem;
+}
+
+.hero__title {
+  font-family: "Montserrat-alt--semiBold";
+  font-size: 4rem;
+}
+
+.hero__para {
+  font-family: "Montserrat-alt--regular";
+  font-size: 1.125rem;
+}
+
+.hero__action {
+  display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 40px;
+  gap: 16px;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 5.625rem;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.03);
+  background-color: #FFFFFF;
+}
+
+.head {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: none;
+}
+
+.head__left {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.burgerMenu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+.burgerMenu div {
+  width: 30px;
+  height: 3px;
+  background-color: #073C35;
+}
+@media (min-width: 992px) {
+  .burgerMenu {
+    display: none;
+  }
+}
+
+.logo {
+  font-family: "Poppins";
+  font-size: 1.75rem;
+}
+.logo .logo__text {
+  color: #073C35;
+}
+.logo span {
+  color: #C29B4F;
+}
+
+.navigation ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+  display: none;
+}
+.navigation a {
+  font-size: 0.875rem;
+  font-family: "Poppins--semiBold";
+  font-weight: 600;
+}
+@media (min-width: 992px) {
+  .navigation ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+  }
+}
+
+.separator {
+  width: 0.5px;
+  background-color: #F8F9FA;
+  border: 1 solid #F8F9FA;
+  height: 1.875rem;
+}
+
+.head__right {
+  display: flex;
+  flex-direction: row;
+  justify-content: none;
+  align-items: center;
+  gap: 20px;
+  font-family: "Poppins--semiBold";
+  color: #073C35;
 }
 
 /*# sourceMappingURL=style.css.map */
