@@ -1,0 +1,7 @@
+@use '../base/base_dir' as *;
+
+.navigation{
+    ul{
+        @include flex-center(row, 40px);
+    }
+}
