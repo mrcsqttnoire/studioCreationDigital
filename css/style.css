@@ -7,8 +7,12 @@
   src: url(../../assets/fonts/Montserrat_Alternates/MontserratAlternates-Regular.ttf);
 }
 @font-face {
-  font-family: "Montserrat-alt--bold";
+  font-family: "Montserrat-alt--Bold";
   src: url(../../assets/fonts/Montserrat_Alternates/MontserratAlternates-SemiBold.ttf);
+}
+@font-face {
+  font-family: "Montserrat-alt--extraBold";
+  src: url(../../assets/fonts/Montserrat_Alternates/MontserratAlternates-ExtraBold.ttf);
 }
 @font-face {
   font-family: "Manrope";
@@ -141,6 +145,18 @@ li {
   padding: 14px 28px;
   font-family: "Montserrat-alt--regular";
   border: 2px solid #073C35;
+}
+
+.cta {
+  padding: 1rem 1.75rem;
+  color: #FFFFFF;
+  background-color: #F09008;
+  border-radius: 1.875rem;
+}
+
+.cta--alt {
+  background-color: transparent;
+  border: 1px solid #FFFFFF;
 }
 
 .card__container {
@@ -483,6 +499,56 @@ li {
 .user__info p {
   font-family: "Manrope";
   font-weight: 400;
+}
+
+.cta-section {
+  min-height: 512px;
+  background-color: #121214;
+}
+
+.cta__content {
+  min-height: 512px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.cta__intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.cta__title {
+  color: #FFFFFF;
+  font-family: "Montserrat-alt--extraBold";
+  font-size: 3rem;
+  text-align: center;
+}
+
+.cta__para {
+  text-align: center;
+}
+
+.para-section--color {
+  color: #868E96;
+}
+
+.cta__action {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.cta__project :last-child {
+  margin-left: 8px;
 }
 
 header {

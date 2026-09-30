@@ -228,3 +228,42 @@
     }
 }
 
+//SECTION 5--------------------------------------------------------------------------------
+
+.cta-section{
+    min-height: 512px;
+    background-color: $bg-cta-section;
+}
+
+.cta__content{
+    min-height: 512px;
+    @include flex($direction: column, $gap: $space-10)
+}
+
+.cta__intro{
+    @include flex($direction: column, $gap: $space-4)
+}
+
+.cta__title{
+    color: $white-color;
+    font-family: $font-cta-title;
+    font-size: rem(48);
+    text-align: center;
+}
+
+.cta__para{
+    text-align: center;
+}
+
+.para-section--color{
+    color: $neutral-color;
+}
+
+.cta__action{
+    @include flex($gap: $space-4);
+    flex-wrap: wrap;
+}
+
+.cta__project :last-child{
+    margin-left: $space-2;
+}
