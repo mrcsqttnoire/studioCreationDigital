@@ -4,6 +4,7 @@
 
 .even-section{
     background-color: $bg-even-section;
+    color: $text-color;
     padding: $space-8 0;
 
     @include respond($xl){
@@ -13,10 +14,22 @@
 
 .odd-section{
     background-color: $bg-odd-section;
+    color: $text-color;
     padding: $space-8 0;
 
     @include respond($xl){
         padding: 0;
+    }
+}
+
+.structure-section{
+    max-width: $w-100;
+    width: $w-100;
+    @include flex($direction: column, $ai: start, $gap: $space-16);
+    
+    @include respond($md){
+        @include flex($direction: column, $gap: $space-16);
+
     }
 }
 
@@ -36,4 +49,16 @@
 .para-section{
     font-family: $font-body;
     font-size:  rem(16);
+}
+
+.intro-section{
+    @include flex($direction: column, $ai: start, $gap: $space-4);
+
+    @include respond($md){
+        @include flex($direction: column, $gap: $space-4);
+
+        h3{
+            text-align: center;
+        }
+    }
 }

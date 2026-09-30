@@ -157,29 +157,8 @@
     min-height: rem(1086);
 }
 
-    .services{
-        min-height: rem(1086);
-    max-width: $w-100;
-    width: $w-100;
-    @include flex($direction: column, $ai: start, $gap: $space-16);
-    
-    @include respond($md){
-        @include flex($direction: column, $gap: $space-16);
-
-    }
-}
-
-.services__intro{
-    @include flex($direction: column, $ai: start, $gap: $space-4);
-
-    @include respond($md){
-        @include flex($direction: column, $gap: $space-4);
-
-        h3{
-            text-align: center;
-        }
-    }
-
+.services{
+    min-height: rem(1086);
 }
 
 .service__grid{
@@ -187,5 +166,52 @@
 
     @include respond($md){
         @include grid(repeat(2, 1fr), repeat(auto-fit, minmax(rem(336), 1fr)), $rgap: $space-6, $cgap: $space-6);
+    }
+}
+
+//SECTION 4--------------------------------------------------------------------------------
+
+.odd--height-two{
+    min-height: rem(714);
+}
+
+.testimonial{
+    min-height: rem(714);
+}
+
+.testimonial__card{
+    @include grid(repeat(1, 1fr), repeat(auto-fit, minmax(rem(324), 1fr)), $rgap: $space-6);
+
+    @include respond($md){
+        @include grid(repeat(2, 1fr), repeat(auto-fit, minmax(rem(324), 1fr)), $rgap: $space-6, $cgap: $space-6);
+    }
+
+    @include respond($lg){
+        @include grid(repeat(3, 1fr), repeat(auto-fit, minmax(rem(324), 1fr)), $rgap: $space-6, $cgap: $space-6);
+    }
+}
+
+.card__user{
+    @include flex($gap: $space-4);
+    
+    img{
+        width: rem(48);   
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        border-radius: $w-100;
+    }
+}
+
+.user__info{
+    @include flex($direction: column, $ai: start, $gap: 2px);
+
+    h5{
+        font-family: $font-user-name;
+        text-transform: capitalize;
+    }   
+
+    p{
+        font-family: $font-accent;
+        font-weight: 400;
     }
 }

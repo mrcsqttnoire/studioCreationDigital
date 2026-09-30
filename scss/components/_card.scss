@@ -3,11 +3,15 @@
 @use '../responsive/base_dir' as  *;
 
 .card__container{
-    @include flex($direction: column, $ai: start, $jc: space-between,  $gap: $space-8);
+    @include flex($direction: column, $ai: start, $gap: $space-8);
     padding: rem(40);
     background-color: $white-color;
     border-radius: rem(24);
     border: 1px solid $card-border-color;
+}
+
+.card__container--space{
+    @include flex($direction: column, $ai: start, $jc: space-between);
 }
 
 .card__icon{

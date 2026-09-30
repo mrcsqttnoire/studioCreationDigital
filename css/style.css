@@ -52,6 +52,7 @@ li {
 
 .even-section {
   background-color: #F8F9FA;
+  color: #121214;
   padding: 32px 0;
 }
 @media (min-width: 1193px) {
@@ -62,11 +63,31 @@ li {
 
 .odd-section {
   background-color: #F1F3F5;
+  color: #121214;
   padding: 32px 0;
 }
 @media (min-width: 1193px) {
   .odd-section {
     padding: 0;
+  }
+}
+
+.structure-section {
+  max-width: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 64px;
+}
+@media (min-width: 768px) {
+  .structure-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 64px;
   }
 }
 
@@ -88,6 +109,26 @@ li {
   font-size: 1rem;
 }
 
+.intro-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 16px;
+}
+@media (min-width: 768px) {
+  .intro-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+  }
+  .intro-section h3 {
+    text-align: center;
+  }
+}
+
 .primary-btn {
   padding: 14px 28px;
   background-color: #073C35;
@@ -105,13 +146,21 @@ li {
 .card__container {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: start;
   gap: 32px;
   padding: 2.5rem;
   background-color: #FFFFFF;
   border-radius: 1.5rem;
   border: 1px solid #E9ECEF;
+}
+
+.card__container--space {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  gap: 0;
 }
 
 .card__icon {
@@ -338,42 +387,6 @@ li {
 
 .services {
   min-height: 67.875rem;
-  max-width: 100%;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: start;
-  gap: 64px;
-}
-@media (min-width: 768px) {
-  .services {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 64px;
-  }
-}
-
-.services__intro {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: start;
-  gap: 16px;
-}
-@media (min-width: 768px) {
-  .services__intro {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 16px;
-  }
-  .services__intro h3 {
-    text-align: center;
-  }
 }
 
 .service__grid {
@@ -393,6 +406,73 @@ li {
     row-gap: 24px;
     column-gap: 24px;
   }
+}
+
+.odd--height-two {
+  min-height: 44.625rem;
+}
+
+.testimonial {
+  min-height: 44.625rem;
+}
+
+.testimonial__card {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(auto-fit, minmax(20.25rem, 1fr));
+  gap: 0;
+  row-gap: 24px;
+  column-gap: 0;
+}
+@media (min-width: 768px) {
+  .testimonial__card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(auto-fit, minmax(20.25rem, 1fr));
+    gap: 0;
+    row-gap: 24px;
+    column-gap: 24px;
+  }
+}
+@media (min-width: 992px) {
+  .testimonial__card {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(auto-fit, minmax(20.25rem, 1fr));
+    gap: 0;
+    row-gap: 24px;
+    column-gap: 24px;
+  }
+}
+
+.card__user {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+.card__user img {
+  width: 3rem;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 100%;
+}
+
+.user__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 2px;
+}
+.user__info h5 {
+  font-family: "Outfit";
+  text-transform: capitalize;
+}
+.user__info p {
+  font-family: "Manrope";
+  font-weight: 400;
 }
 
 header {
