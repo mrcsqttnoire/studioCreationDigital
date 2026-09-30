@@ -1,0 +1,39 @@
+@use '../base/base_dir' as *;
+@use '../variables/base_dir' as *;
+@use '../responsive/base_dir' as *;
+
+.even-section{
+    background-color: $bg-even-section;
+    padding: $space-8 0;
+
+    @include respond($xl){
+        padding: 0;
+    }
+}
+
+.odd-section{
+    background-color: $bg-odd-section;
+    padding: $space-8 0;
+
+    @include respond($xl){
+        padding: 0;
+    }
+}
+
+.tag-section{
+    color: $accent-color;
+    font-family: $font-tag;
+    font-size: rem(14);
+    text-transform: uppercase;
+}
+
+.title-section{
+    color: $text-color;
+    font-family: $font-title-section;
+    font-size: rem(40);
+}
+
+.para-section{
+    font-family: $font-body;
+    font-size:  rem(16);
+}

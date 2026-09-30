@@ -1,14 +1,24 @@
+@use 'mixins' as *;
+@use 'fonctions' as *;
 @use '../variables/colors' as *;
+@use '../responsive/base_dir' as *;
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+
 .wrapper{
     max-width: 90%;
     width: 100%;
+    // padding: 0 5%;
     margin: auto;
+
+    @include respond($xl){
+        // padding: 0 rem(96);
+    }
 }
 
 a{

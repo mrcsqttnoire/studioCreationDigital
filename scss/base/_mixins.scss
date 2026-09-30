@@ -17,3 +17,12 @@
     align-items: $ai;
     gap: $gap;
 }
+
+@mixin grid($nbCol, $nbRow, $gap: none, $rgap: 0, $cgap: 0){
+  display: grid;
+  grid-template-columns: $nbCol;
+  grid-template-rows: $nbRow;
+  gap: $gap;
+  row-gap: $rgap;
+  column-gap: $cgap;
+}
