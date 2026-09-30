@@ -10,7 +10,7 @@
     flex-direction: $direction;
 }
 
-@mixin flex($direction: row, $jc: center, $ai: center, $gap: none){
+@mixin flex($direction: row, $jc: center, $ai: center, $gap: 0){
     display: flex;
     flex-direction: $direction;
     justify-content: $jc;
@@ -18,7 +18,7 @@
     gap: $gap;
 }
 
-@mixin grid($nbCol, $nbRow, $gap: none, $rgap: 0, $cgap: 0){
+@mixin grid($nbCol, $nbRow, $gap: 0, $rgap: 0, $cgap: 0){
   display: grid;
   grid-template-columns: $nbCol;
   grid-template-rows: $nbRow;
