@@ -391,8 +391,8 @@ li {
 
 .service__grid {
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  grid-template-rows: repeat(auto-fit, minmax(21rem, 1fr));
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, minmax(21rem, 1fr));
   gap: 0;
   row-gap: 24px;
   column-gap: 0;
@@ -401,7 +401,7 @@ li {
   .service__grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(auto-fit, minmax(21rem, 1fr));
+    grid-template-rows: repeat(2, minmax(21rem, 1fr));
     gap: 0;
     row-gap: 24px;
     column-gap: 24px;
@@ -418,8 +418,8 @@ li {
 
 .testimonial__card {
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  grid-template-rows: repeat(auto-fit, minmax(20.25rem, 1fr));
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, minmax(20.25rem, 1fr));
   gap: 0;
   row-gap: 24px;
   column-gap: 0;
@@ -428,10 +428,15 @@ li {
   .testimonial__card {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(auto-fit, minmax(20.25rem, 1fr));
+    grid-template-rows: repeat(2, minmax(20.25rem, 1fr));
     gap: 0;
     row-gap: 24px;
     column-gap: 24px;
+  }
+  .testimonial__card > :last-child {
+    width: 50%;
+    grid-column: 1/-1;
+    justify-self: center;
   }
 }
 @media (min-width: 992px) {
@@ -442,6 +447,11 @@ li {
     gap: 0;
     row-gap: 24px;
     column-gap: 24px;
+  }
+  .testimonial__card > :last-child {
+    width: auto;
+    grid-column: auto;
+    justify-self: stretch;
   }
 }
 
