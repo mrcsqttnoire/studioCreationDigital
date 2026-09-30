@@ -1,0 +1,91 @@
+@use '../base/base_dir' as *;
+@use '../variables/base_dir' as *;
+@use '../responsive/base_dir' as *;
+
+.logo__footer{
+    width: $space-4;
+    height: $space-4;
+    background: $logo-color-gradient;
+    border-radius: $w-100;
+}
+
+.footer{
+    min-height: 415px;
+}
+
+.footer__content{
+    @include flex($direction: column, $ai: start, $gap: $space-16);
+    min-height: 415px;
+}
+
+.footer__upper{
+    width: 100%;
+    color: $footer-text-color;
+    @include flex($direction: column, $ai: start);
+    @include respond($sm){
+        @include flex($jc: space-between, $gap: $space-8);
+    }
+}
+
+.footer__brand{
+    width: 100%;
+    @include flex($direction: column,$ai: start, $gap: 18px);
+
+    a{
+        @include flex($jc: start, $gap: $space-2);
+        font-family: $font-numeric;
+        font-weight: 800;
+        font-size: rem(24);
+    }
+
+    p{
+        font-size: rem(14);
+    }
+
+    @include respond($sm){
+        max-width: 320px;
+    }
+}
+
+.footer__linkGroup{
+    margin-top: $space-8;
+    @include flex($ai: start, $gap: $space-20);
+    @include respond($sm){
+        @include flex($ai: start, $gap: $space-20);
+    }
+}
+
+.footer__navigation, .footer__contact, .footer__navigation ul, .footer__contact ul{
+    @include flex($direction: column, $ai: start, $gap: $space-5)
+}
+
+.footer__navigation{
+    ul{
+        font-size: rem(14);
+    }
+}
+
+.link__title{
+    font-family: $font-logo;
+    font-weight: 700;
+    text-transform: uppercase;
+}   
+
+.footer__separator{
+    width: 100%;
+    height: 1px;
+    background-color: $card-border-color;
+}
+
+.footer__lower{
+    width: 100%;
+    margin-bottom: 40px ;
+    @include flex($jc: space-between);
+    font-family: $font-accent;
+    color: $neutral-color;
+    font-weight: 400;
+}
+
+.foote__legal{
+    @include flex($gap: 24px)
+}
