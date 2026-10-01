@@ -70,8 +70,8 @@
 .hero__action{
     @include flex($gap:16px);
 
-    > * {                                  // les 2 boutons
-        transition: transform .3s ease;      // et non "all", plus précis
+    > * {                             
+        transition: transform .3s ease;     
 
         &:hover {
         transform: scale(.98);
