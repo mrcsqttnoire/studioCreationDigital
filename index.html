@@ -5,27 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pricial</title>
     <link rel="stylesheet" href="css/style.css">
+    
+    <link href="JS/Aos/dist/aos.css" rel="stylesheet">
+    <script src="JS/Aos/dist/aos.js"></script>
 </head>
 <body>
     <header>
-        <div class="head wrapper">
+        <div class="head wrapper-header">
             <div class="head__left">
-                <div class="burgerMenu">
-                    <div></div>
-                    <div></div>
-                    <div></div>
+                <div class="burgerMenu" onclick="activeBurger()">
+                    <div id="item-1"></div>
+                    <div id="item-2"></div>
+                    <div id="item-3"></div>
                 </div>
                 <div class="logo">
                     <h3 class="logo__text">Picarial<span>.</span></h3>
                 </div>
             </div>
             <nav class="navigation" >
-                <ul>
-                    <li><a href="#">Acceuil</a></li>
-                    <li><a href="#about">À propos</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#">Témoignages</a></li>
-                    <li><a href="#">Contact</a></li>
+                <ul id="listNav">
+                    <div class="selected__line"></div>
+                    <li class="selected navHover"><a href="index.html">Acceuil</a></li>
+                    <li class="navHover"><a href="#about">À propos</a></li>
+                    <li class="navHover"><a href="#services">Services</a></li>
+                    <li class="navHover"><a href="#testimonial">Témoignages</a></li>
+                    <li class="navHover"><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
             <div class="head__right">
@@ -42,49 +46,49 @@
             <div class="wrapper">
                 <div class="hero">
                     <div class="hero__left">
-                        <p class="hero__tag">Studio de création digitale à Madagascar</p>
-                        <h1 class="hero__title">Nous créons des expériences digitales.</h1>
-                        <p class="para-section para-section--hero">Picarial accompagne les marques ambitieuses dans leur transformation digitale — stratégie, design, développement.</p>
+                        <p class="hero__tag" data-aos="fade-right" data-aos-delay="100">Studio de création digitale à Madagascar</p>
+                        <h1 class="hero__title" data-aos="fade-right" data-aos-delay="150">Nous créons des expériences digitales.</h1>
+                        <p class="para-section para-section--hero" data-aos="fade-right" data-aos-delay="200">Picarial accompagne les marques ambitieuses dans leur transformation digitale — stratégie, design, développement.</p>
     
                         <div class="hero__action">
-                            <a href="#" class="primary-btn">Découvrir nos projets</a>
-                            <a href="#" class="secondary-btn">Nous contacter</a>
+                            <a href="#" class="primary-btn" data-aos="fade-up" data-aos-delay="200">Découvrir nos projets <img src="assets/icons/chevron.svg" alt=""></a>
+                            <a href="#" class="secondary-btn" data-aos="fade-up" data-aos-delay="250">Nous contacter</a>
                         </div>
                     </div>
-                    <div class="hero__right">
+                    <div class="hero__right" data-aos="fade-left" data-aos-delay="300">
                         <img src="assets/img/hero-img.png" alt="Picarial"  title="Picarial">
                     </div>
                 </div>
             </div>
         </section>
-        <section class="odd-section odd--height-one">
+        <section class="odd-section odd--height-one" id="about">
             <div class="wrapper">
                 <div class="about">
-                    <div class="about__left">
+                    <div class="about__left" data-aos="fade-right" data-aos-delay="200">
                         <img src="assets/img/about.jpg" alt="about us" title="about us">
                     </div>
                     <div class="about__right">
                         <div class="about__text">
-                            <p class="about__tag tag-section"><span class="line"></span> à propos de picarial</p>
-                            <h3 class="about_title title-section">Créateurs de valeur numérique depuis 2018.</h3>
-                            <p class="para-section">
+                            <p class="about__tag tag-section" data-aos="fade-left" data-aos-delay="100"><span class="line"></span> à propos de picarial</p>
+                            <h3 class="about_title title-section" data-aos="fade-left" data-aos-delay="150">Créateurs de valeur numérique depuis 2018.</h3>
+                            <p class="para-section" data-aos="fade-left" data-aos-delay="200">
                                 Depuis 2018, nous sommes une équipe passionnée de designers, développeurs et stratèges digitaux. Notre mission : transformer vos idées en expériences numériques mémorables. Nous croyons en l'alliance parfaite de l'esthétique et de la performance.
                             </p>
                         </div>
                         <div class="statistic">
-                            <div class="statistic__container">
+                            <div class="statistic__container" data-aos="fade-up" data-aos-delay="50">
                                 <h2 class="statistic__number">150+</h2>
                                 <p class="statistic__title">Projets livrés</p>
                             </div>
-                            <div class="statistic__container">
+                            <div class="statistic__container" data-aos="fade-up" data-aos-delay="100">
                                 <h2 class="statistic__number">45+</h2>
                                 <p class="statistic__title">Clients satisfaits</p>
                             </div>
-                            <div class="statistic__container">
+                            <div class="statistic__container" data-aos="fade-up" data-aos-delay="150">
                                 <h2 class="statistic__number">8</h2>
                                 <p class="statistic__title">Années d'expérience</p>
                             </div>
-                            <div class="statistic__container">
+                            <div class="statistic__container" data-aos="fade-up" data-aos-delay="200">
                                 <h2 class="statistic__number">12</h2>
                                 <p class="statistic__title">Experts créatifs</p>
                             </div>
@@ -94,7 +98,7 @@
             </div>
         </section>
 
-        <section class="even-section even--height-two">
+        <section class="even-section even--height-two" id="services">
             <div class="wrapper">
                 <div class="services structure-section">
                     <div class="intro-section">
@@ -102,55 +106,63 @@
                         <h3 class="title-section">Des solutions complètes pour votre présence digitale</h3>
                     </div>
                     <div class="service__grid">
-                        <div class="card__container">
-                                <img class="card__icon" src="assets/icons/paintbrush.svg" alt="design" title="design">
-                                <div class="card__text">
-                                    <h4 class="card__title">Design UI/UX</h4>
-                                    <p class="para-section">Interfaces intuitives et esthétiques qui convertissent vos visiteurs en clients. Recherche utilisateur poussée et prototypes interactifs de haute fidélité.</p>
-                                </div>
-                                <div class="card__action">
-                                    <a href="#">En savoir plus</a>
-                                    <img src="assets/icons/arrow-right.svg" alt="">
-                                </div>
+                        <div data-aos="fade-up" data-aos-delay="200">
+                            <div class="card__container fix onHover">
+                                    <img class="card__icon" src="assets/icons/paintbrush.svg" alt="design" title="design">
+                                    <div class="card__text">
+                                        <h4 class="card__title">Design UI/UX</h4>
+                                        <p class="para-section">Interfaces intuitives et esthétiques qui convertissent vos visiteurs en clients. Recherche utilisateur poussée et prototypes interactifs de haute fidélité.</p>
+                                    </div>
+                                    <div class="card__action">
+                                        <a href="#">En savoir plus</a>
+                                        <img src="assets/icons/arrow-right.svg" alt="">
+                                    </div>
+                            </div>
                         </div>
-                        <div class="card__container">
-                                <img class="card__icon" src="assets/icons/code.svg" alt="design" title="design">
-                                <div class="card__text">
-                                    <h4 class="card__title">Développement Web</h4>
-                                    <p class="para-section">Sites performants, sécurisés et sur-mesure avec les technologies les plus récentes. Développement adapté à vos flux de travail et optimisé pour le référencement.</p>
-                                </div>
-                                <div class="card__action">
-                                    <a href="#">En savoir plus</a>
-                                    <img src="assets/icons/arrow-right.svg" alt="">
-                                </div>
+                        <div data-aos="fade-up" data-aos-delay="250">
+                            <div class="card__container fix onHover" >
+                                    <img class="card__icon" src="assets/icons/code.svg" alt="design" title="design">
+                                    <div class="card__text">
+                                        <h4 class="card__title">Développement Web</h4>
+                                        <p class="para-section">Sites performants, sécurisés et sur-mesure avec les technologies les plus récentes. Développement adapté à vos flux de travail et optimisé pour le référencement.</p>
+                                    </div>
+                                    <div class="card__action">
+                                        <a href="#">En savoir plus</a>
+                                        <img src="assets/icons/arrow-right.svg" alt="">
+                                    </div>
+                            </div>
                         </div>
-                        <div class="card__container">
-                                <img class="card__icon" src="assets/icons/chart.svg" alt="design" title="design">
-                                <div class="card__text">
-                                    <h4 class="card__title">Stratégie Digitale</h4>
-                                    <p class="para-section">Plans d'action data-driven pour maximiser votre impact en ligne. Positionnement de marque, SEO technique, et accompagnement stratégique sur le long terme.</p>
-                                </div>
-                                <div class="card__action">
-                                    <a href="#">En savoir plus</a>
-                                    <img src="assets/icons/arrow-right.svg" alt="">
-                                </div>
+                        <div data-aos="fade-up" data-aos-delay="300">
+                            <div class="card__container fix onHover">
+                                    <img class="card__icon" src="assets/icons/chart.svg" alt="design" title="design">
+                                    <div class="card__text">
+                                        <h4 class="card__title">Stratégie Digitale</h4>
+                                        <p class="para-section">Plans d'action data-driven pour maximiser votre impact en ligne. Positionnement de marque, SEO technique, et accompagnement stratégique sur le long terme.</p>
+                                    </div>
+                                    <div class="card__action">
+                                        <a href="#">En savoir plus</a>
+                                        <img src="assets/icons/arrow-right.svg" alt="">
+                                    </div>
+                            </div>
                         </div>
-                        <div class="card__container">
-                                <img class="card__icon" src="assets/icons/award.svg" alt="design" title="design">
-                                <div class="card__text">
-                                    <h4 class="card__title">Branding & Identité</h4>
-                                    <p class="para-section">Identités visuelles fortes qui racontent l'histoire de votre marque. Logotype, charte graphique complète et direction artistique de haut niveau.</p>
-                                </div>
-                                <div class="card__action">
-                                    <a href="#">En savoir plus</a>
-                                    <img src="assets/icons/arrow-right.svg" alt="">
-                                </div>
+                        <div data-aos="fade-up" data-aos-delay="350">
+                            <div class="card__container fix onHover">
+                                    <img class="card__icon" src="assets/icons/award.svg" alt="design" title="design">
+                                    <div class="card__text">
+                                        <h4 class="card__title">Branding & Identité</h4>
+                                        <p class="para-section">Identités visuelles fortes qui racontent l'histoire de votre marque. Logotype, charte graphique complète et direction artistique de haut niveau.</p>
+                                    </div>
+                                    <div class="card__action">
+                                        <a href="#">En savoir plus</a>
+                                        <img src="assets/icons/arrow-right.svg" alt="">
+                                    </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="odd-section odd--height-two">
+        <section class="odd-section odd--height-two" id="testimonial">
             <div class="wrapper">
                 <div class="testimonial structure-section">
                     <div class="intro-section">
@@ -158,36 +170,42 @@
                         <h3 class="title-section">Ce que disent nos clients</h3>
                     </div>
                     <div class="testimonial__card">
-                        <div class="card__container card__container--space">
-                            <img src="assets/icons/quote.svg" alt="avis" title="avis">
-                            <p class="para-section">« Picarial a transformé notre vision en un site web qui dépasse toutes nos attentes. Leur créativité est sans limites. »</p>
-                            <div class="card__user">
-                                <img src="assets/img/users/marie.jpg" alt="marie" title="marie">
-                                <div class="user__info">
-                                    <h5>marie dupont</h5>
-                                    <p>CEO de LuxeVert</p>
+                        <div data-aos="fade-right" data-aos-delay="300">
+                            <div class="card__container card__container--space fix onHover" >
+                                <img src="assets/icons/quote.svg" alt="avis" title="avis">
+                                <p class="para-section">« Picarial a transformé notre vision en un site web qui dépasse toutes nos attentes. Leur créativité est sans limites. »</p>
+                                <div class="card__user">
+                                    <img src="assets/img/users/marie.jpg" alt="marie" title="marie">
+                                    <div class="user__info">
+                                        <h5>marie dupont</h5>
+                                        <p>CEO de LuxeVert</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="card__container card__container--space">
-                            <img src="assets/icons/quote.svg" alt="avis" title="avis">
-                            <p class="para-section">« Une équipe réactive, professionnelle et créative. Notre taux de conversion a augmenté de 40% depuis la refonte. »</p>
-                            <div class="card__user">
-                                <img src="assets/img/users/thoma.jpg" alt="thoma" title="thoma">
-                                <div class="user__info">
-                                    <h5>thomas laurent</h5>
-                                    <p>CEO de LuxeVert</p>
+                        <div data-aos="fade-up" data-aos-delay="300">
+                            <div class="card__container card__container--space fix onHover" >
+                                <img src="assets/icons/quote.svg" alt="avis" title="avis">
+                                <p class="para-section">« Une équipe réactive, professionnelle et créative. Notre taux de conversion a augmenté de 40% depuis la refonte. »</p>
+                                <div class="card__user">
+                                    <img src="assets/img/users/thoma.jpg" alt="thoma" title="thoma">
+                                    <div class="user__info">
+                                        <h5>thomas laurent</h5>
+                                        <p>CEO de LuxeVert</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="card__container card__container--space">
-                            <img src="assets/icons/quote.svg" alt="avis" title="avis">
-                            <p class="para-section">« Le meilleur investissement digital que nous ayons fait. Picarial comprend vraiment les besoins de ses clients. »</p>
-                            <div class="card__user">
-                                <img src="assets/img/users/shophie.jpg" alt="marie" title="marie">
-                                <div class="user__info">
-                                    <h5>sophie martin</h5>
-                                    <p>Fondatrice de BelleAura</p>
+                        <div data-aos="fade-left" data-aos-delay="300">
+                            <div class="card__container card__container--space fix onHover" >
+                                <img src="assets/icons/quote.svg" alt="avis" title="avis">
+                                <p class="para-section">« Le meilleur investissement digital que nous ayons fait. Picarial comprend vraiment les besoins de ses clients. »</p>
+                                <div class="card__user">
+                                    <img src="assets/img/users/shophie.jpg" alt="marie" title="marie">
+                                    <div class="user__info">
+                                        <h5>sophie martin</h5>
+                                        <p>Fondatrice de BelleAura</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -195,7 +213,7 @@
                 </div>
             </div>
         </section>
-        <section class="cta-section">
+        <section class="cta-section" id="contact">
             <div class="wrapper">
                 <div class="cta__content">
                     <div class="cta__intro">
@@ -205,11 +223,11 @@
                         </p>
                     </div>
                     <div class="cta__action">
-                        <a href="#" class="cta__project cta">
+                        <a href="#" class="cta__project cta" data-aos="fade-up" data-aos-delay="200">
                             Démarrer un projet
                             <img src="assets/icons/arrow-up.svg" alt="Démarrer un projet" title="Démarrer un projet">
                         </a>
-                        <a href="#" class="cta__tarifs cta cta--alt">Consulter nos tarifs</a>
+                        <a href="#" class="cta__tarifs cta cta--alt" data-aos="fade-up" data-aos-delay="300">Consulter nos tarifs</a>
                     </div>
                 </div>
             </div>
@@ -259,3 +277,8 @@
     </footer>
 </body>
 </html>
+
+<script>
+  AOS.init();
+</script>
+<script src="js/script.js"></script>

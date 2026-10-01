@@ -1,0 +1,9 @@
+@use '../variables/base_dir' as *;
+@use '../base/mixins' as *;
+@use 'breakpoint' as *;
+
+html {
+  font-size: 87.5%;    
+
+  @include respond($md) { font-size: 100%; } 
+}

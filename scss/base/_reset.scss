@@ -7,17 +7,32 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color: $text-color;
 }
 
+body{
+    overflow-x: hidden;
+}
 
-.wrapper{
-    max-width: 90%;
+.wrapper-header{
+    max-width: 1440px;
     width: 100%;
-    // padding: 0 5%;
+    padding: 0px 20px;
     margin: auto;
 
     @include respond($xl){
-        // padding: 0 rem(96);
+        padding: 0 rem(80);
+    }
+}
+
+.wrapper{
+    max-width: 1440px;
+    width: 100%;
+    padding: 0 rem(20);
+    margin: auto;
+
+    @include respond($xl){
+        padding: 0 rem(96);
     }
 }
 

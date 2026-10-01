@@ -1,0 +1,56 @@
+@use '../variables/base_dir' as *;
+
+@keyframes developp {
+    from { 
+        max-height: 0; 
+        opacity: 0; 
+    }
+    to { 
+        max-height: rem(500); 
+        opacity: 1;
+    }
+}
+
+@keyframes darkToWhite {
+    from{
+        background-color: auto;
+    }
+    to{
+        background-color: $bg-header;
+    }
+}
+@keyframes whiteToDark {
+    from{
+        background-color: auto;
+    }
+    to{
+        background-color: $logo-color;
+    }
+}
+
+@keyframes rotate45 {
+    from{
+        rotate: 0deg;
+    }
+    to{
+        rotate: 45deg;
+    }
+}
+
+@keyframes rotate-45 {
+    from{
+        rotate: 0deg;
+    }
+    to{
+        rotate: -45deg;
+    }
+}
+
+@keyframes unrotate {
+    from{
+        rotate: auto;
+    }
+    to{
+        rotate: 0deg;
+    }
+}

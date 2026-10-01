@@ -2,6 +2,21 @@
 @use '../variables/base_dir' as *;
 @use '../responsive/base_dir' as *;
 
+.selected{
+    color: $bg-btn;
+}
+
+.selected__line{
+    @include respond($lg){
+        left: 0;
+        bottom: 0;
+        position: absolute;
+        width: 53px;
+        height: 1.5px;
+        background-color: $logo-dot-color;
+    }
+}
+
 .even-section{
     background-color: $bg-even-section;
     color: $text-color;
@@ -60,5 +75,22 @@
         h3{
             text-align: center;
         }
+    }
+}
+
+.onHover{
+    transition: translate .3s ease;
+
+    &:hover {
+        translate: 0 rem(-7);
+    }
+}
+
+.navHover{
+    transition: translate .3s ease;
+
+    &:hover {
+        translate: 0 rem(-3);
+        font-weight: 700;
     }
 }

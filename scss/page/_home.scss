@@ -66,8 +66,22 @@
 }
 
 .hero__action{
-    @include flex($gap:16px)
+    @include flex($gap:16px);
+
+    > * {                                  // les 2 boutons
+        transition: transform .3s ease;      // et non "all", plus précis
+
+        &:hover {
+        transform: scale(.98);
+        }
+    }
+    > :first-child{
+        img{
+            margin-left: 10px;
+        }
+    }
 }
+
 
 //SECTION 2-----------------------------------------------------------------------------------
 
@@ -118,6 +132,7 @@
 .about__text{
     @include flex($direction: column, $ai: start, $gap: 32px);
     width: $w-100;
+
 }
 
 
