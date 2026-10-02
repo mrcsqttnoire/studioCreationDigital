@@ -32,71 +32,46 @@ function activeBurger(){
 
 }
 
-const home = document.getElementById('acceuilNav');
-const about = document.getElementById('aboutNav');
-const service = document.getElementById('serviceNav');
-const testimonial = document.getElementById('temoignageNav');
-const contact = document.getElementById('contactNav');
+const header = document.getElementById('header')
+window.addEventListener('resize', () => {
+    if(header.offsetWidth >= 992){
+        nav.classList.remove('activeBurger')
+        line_1.classList.remove('rotate45')
+        line_2.classList.remove('delete')
+        line_3.classList.remove('rotate-45')
 
+        line_1.classList.add('unrotate')
+        line_2.classList.add('show')
+        line_3.classList.add('unrotate')
+    }
+})
+
+
+const ref = document.querySelectorAll('.nav');
 const line = document.querySelector('.selected__line')
 
-document.querySelectorAll('.nav').forEach(function(btn) {
+ref.forEach(function(btn) {
     btn.addEventListener('click', () => {
-        if(btn.id === about.id){
-            about.classList.add('selected')
-            home.classList.remove('selected')
-            service.classList.remove('selected')
-            testimonial.classList.remove('selected')
-            about.classList.remove('selected')
-            contact.classList.remove('selected')
-
-            line.style.left = about.offsetLeft  + "px"
-            line.style.width = about.offsetWidth + "px"
-        } 
-        else if(btn.id === service.id){
-            about.classList.remove('selected')
-            home.classList.remove('selected')
-            service.classList.add('selected')
-            testimonial.classList.remove('selected')
-            about.classList.remove('selected')
-            contact.classList.remove('selected')
-
-            line.style.left = service.offsetLeft + "px"
-            line.style.width = service.offsetWidth + "px"
-        } 
-        else if(btn.id === testimonial.id){
-            about.classList.remove('selected')
-            home.classList.remove('selected')
-            service.classList.remove('selected')
-            testimonial.classList.add('selected')
-            about.classList.remove('selected')
-            contact.classList.remove('selected')
-
-            line.style.left = testimonial.offsetLeft + "px"
-            line.style.width = testimonial.offsetWidth + "px"
-        } 
-        else if(btn.id === contact.id){
-            about.classList.remove('selected')
-            home.classList.remove('selected')
-            service.classList.remove('selected')
-            testimonial.classList.remove('selected')
-            about.classList.remove('selected')
-            contact.classList.add('selected')
-
-            line.style.left = contact.offsetLeft + "px"
-            line.style.width = contact.offsetWidth + "px"
-        } 
-        else {
-            about.classList.remove('selected')
-            home.classList.add('selected')
-            service.classList.remove('selected')
-            testimonial.classList.remove('selected')
-            about.classList.remove('selected')
-            contact.classList.remove('selected')
-
-            line.style.left = home.offsetLeft + "px"
-            line.style.width = home.offsetWidth + "px"
-        } 
-
+        ref.forEach((ref) => {
+            if (btn.id == ref.id){
+                btn.classList.add('selected')
+                line.style.left = btn.offsetLeft + "px"
+                line.style.width = btn.offsetWidth + "px"
+            } else {
+                ref.classList.remove('selected')
+            }
+        })
     });
 });
+
+// const obsever = new IntersectionObserverEntry((affiched) => {
+//     affiched.forEach(section => {
+//         if(section.isIntersecting){
+//             console.log(ok)
+//         }
+//     })
+// }, {
+//     threshold: 0.1
+// })
+
+// obsever.observe(document.getElementById('about'))
